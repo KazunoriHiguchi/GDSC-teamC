@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import modal1 from './modal1';
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={name:"わんこ"};
-  }
   render(){
     return(
-    <div>
-<button>
-授業名<br/>教師名
-</button>
-
-    </div>
+      <div>
+        <modal1/>
+        <modal1/>
+      </div>
     )
   }
 }

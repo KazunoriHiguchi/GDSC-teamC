@@ -27,3 +27,13 @@
   padding: 1em;
   background:#fff;
 }
+
+.open{
+  width:150px;
+  height: 150px;
+}
+
+.close{
+  width:10px;
+  height:10px;
+}
