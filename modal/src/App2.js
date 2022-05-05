@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
-function App() {
+function App2() {
   const [todos, setTodos] = useState([])    //object destructuring 
   const todoNameRef = useRef()
 
@@ -49,4 +49,4 @@ function App() {
   )
 }
 
-export default App;
+export default App2;

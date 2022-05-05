@@ -30,7 +30,9 @@ p{
   color: #696969;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 h3{
   text-align: center;
