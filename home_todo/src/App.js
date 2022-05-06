@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import TodoList from './TodoList'
 import { v4 as uuidv4 } from 'uuid'
-//import { View, Button, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import { View, Button, StyleSheet, TouchableOpacity, Text } from 'react-native'
 //import './firework.js'
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
@@ -44,13 +44,13 @@ function App() {
     )*/
   }
 
-  /*const AppButton = ({ onPress, title }) => (
+  const AppButton = ({ onPress, title }) => (
     <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
       <Text style={styles.appButtonText}>{title}</Text>
     </TouchableOpacity>
-  );*/
+  )
 
-  /*const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
     appButtonContainer: {
       elevation: 8,
       backgroundColor: "#009688",
@@ -65,7 +65,7 @@ function App() {
       alignSelf: "center",
       textTransform: "uppercase"
     }
-  })*/
+  })
 
   return (
     <>
@@ -73,11 +73,11 @@ function App() {
       <input ref={todoNameRef} type='text' />
       <button 
         onClick={handleAddTodo}
-        //style={styles.buttonStyle}
+        style={styles.buttonStyle}
       >追加</button>
       <button 
         onClick={handleClearTodos}
-        //style={styles.buttonStyle}
+        style={styles.buttonStyle}
       >完了</button>
       <div>残り{todos.filter(todo => !todo.complete).length}コ</div>
     </>
