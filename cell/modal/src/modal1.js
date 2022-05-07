@@ -1,6 +1,7 @@
 import './modal1.css'
 import React, { useState } from 'react'
 
+
       function ModalFirst({
         show,
         setShow,
@@ -16,8 +17,13 @@ import React, { useState } from 'react'
         setMemo,
       }) {
         const closeModal = () => {
-          setShow(false)
+          setShow(false) 
         }
+       
+       
+       
+        
+        
         // 以下記入欄
         const titleChange = (event) => {
           setTitle(event.target.value)
@@ -55,7 +61,7 @@ import React, { useState } from 'react'
         const text3 = (
           <div class="inputContainer">
             <div>
-              <label for="time">時間</label>
+              <label for="time">授業形式</label>
               <input type="text" onChange={timeChange} className="inputItem"></input>
             </div>
             <p>{time}</p>
@@ -87,16 +93,20 @@ import React, { useState } from 'react'
             <p>{memo}</p>
           </div>
         )
+
         // ここまで記入欄
+          
 
         if (show) {
           return (
             <div className="overlay" onClick={closeModal}>
               <div className="content" onClick={(e) => e.stopPropagation()}>
+                <p>{text3}</p>
                 <p>{text1}</p>
                 <p>{text2}</p>
                 <p>{text4}</p>
                 <p>{text5}</p>
+                
                 
                 <button onClick={closeModal} class="Close">Close</button>
               </div>
@@ -106,6 +116,7 @@ import React, { useState } from 'react'
           return null
         }
       }
+      
 
       function ModalApp1() {
         const [show, setShow] = useState(false)
@@ -119,7 +130,7 @@ import React, { useState } from 'react'
         const [memo, setMemo] = useState('')
         return (
           <>
-            <button onClick={openModal} class="open">{[title, setTitle]}<br/>{[teacher, setTeacher]}<br/>{[room, setRoom]}<br/></button>
+            <button onClick={openModal} class="open" id="a">{[time, setTime]}<br/>{[title, setTitle]}<br/>{[teacher, setTeacher]}<br/>{[room, setRoom]}<br/>{[memo,setMemo]}</button>
             
 
             <ModalFirst
